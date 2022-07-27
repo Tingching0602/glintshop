@@ -1,22 +1,54 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import SignIn from '../views/SignIn.vue'
+import SignUp from '../views/SignUp.vue'
+import HomePage from '../views/HomePage.vue'
+import Shopping from '../views/ShoppingHome.vue'
+import NotFound from '../views/NotFound.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'homepage',
+    component: HomePage
+  }, 
+  {
+    path: '/signin',
+    name: 'sign-in',
+    component: SignIn
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/signup',
+    name: 'sign-up',
+    component: SignUp
+  }, 
+  {
+    path: '/productlist',
+    name: 'product-list',
+    component: () => import("../views/ProductList.vue")
+  },
+  {
+    path: '/shoppinghome',
+    name: 'shoppong-home',
+    component: Shopping
+  },
+  {
+    path: '/aboutus',
+    name: 'about-us',
+    component: () => import("../views/AboutUs.vue")
+  },
+  {
+    path: '/talktous',
+    name: 'talk-to-us',
+    component: () => import("../views/TalktoUs.vue")
+  },
+  {
+    path: '/*',
+    name: 'not-found',
+    component: NotFound
   }
 ]
 
