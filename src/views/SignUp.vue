@@ -1,12 +1,13 @@
 <template>
+<div id="signup">
   <div class="container py-5">
-    <form class="w-100" @submit.prevent.stop="handleSubmit">
+    <form class="signup-form" @submit.prevent.stop="handleSubmit">
       <div class="text-center mb-4">
-        <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
+        <h1 class="h1 mb-3 font-weight-normal">建立你的會員帳號</h1>
       </div>
 
       <div class="form-label-group mb-2">
-        <label for="name">Name</label>
+        <label for="name">姓名</label>
         <input
           id="name"
           v-model="name"
@@ -21,7 +22,7 @@
       </div>
 
       <div class="form-label-group mb-2">
-        <label for="email">Email</label>
+        <label for="email">帳號</label>
         <input
           id="email"
           v-model="email"
@@ -35,7 +36,7 @@
       </div>
 
       <div class="form-label-group mb-3">
-        <label for="password">Password</label>
+        <label for="password">密碼</label>
         <input
           id="password"
           v-model="password"
@@ -49,35 +50,36 @@
       </div>
 
       <div class="form-label-group mb-3">
-        <label for="password-check">Password Check</label>
+        <label for="password-check">密碼確認</label>
         <input
           id="password-check"
           v-model="passwordCheck"
           name="passwordCheck"
           type="password"
           class="form-control"
-          placeholder="Password"
+          placeholder="Password Check"
           autocomplete="new-password"
           required
         />
       </div>
 
       <button
-        class="btn btn-lg btn-primary btn-block mb-3"
+        class="btnsignup btn-lg btn-primary btn-block mb-3"
         type="submit"
         :disabled="isProcessing"
       >
-        Submit
+        建立
       </button>
 
-      <div class="text-center mb-3">
+      <div class="btntosignin text-center mb-3">
         <p>
-          <router-link to="/signin"> Sign In </router-link>
+          <router-link to="/signin"> 登入會員帳號 </router-link>
         </p>
       </div>
 
-      <p class="mt-5 mb-3 text-muted text-center">&copy; 2021-2022</p>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; 2022</p>
     </form>
+  </div>
   </div>
 </template>
 
@@ -145,3 +147,79 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+
+#signup {
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label-group {
+  width: 540px;
+  margin: 10px 0;
+  position: relative;
+}
+
+
+h1 {
+  margin-top: 25px;
+  font-weight: bold;
+  color: #728C37;
+  font-size: 23px;
+}
+
+.form-label-group {
+  width: 540px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.btnsignup {
+ color: #fff;
+ background-color: #728C37;
+ font-weight: 700;
+ font-size: 24px;
+ border-radius: 50px;
+ width: 540px;
+ height: 52px;
+}
+
+label {
+  position: absolute;
+  padding-left: 11px;
+  color: #657786;
+  font-size: 15px;
+  display: block;
+  width: 100%;
+}
+
+input {
+  width: 540px;
+  height: 52px;
+  border-radius: 4px;
+  font-size: 19px;
+  font-weight: 500;
+  background-color: #F5F8FA;
+  padding: 1.3em 0 0 1em;
+  border: none;
+  border-bottom: 2px solid #657786;
+  &:focus,
+  &:hover {
+    border-bottom: 2px solid #BAB649;
+  }
+}
+
+.btntosignin {
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+</style>

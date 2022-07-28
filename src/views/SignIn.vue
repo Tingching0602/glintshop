@@ -1,12 +1,11 @@
 <template>
+<div id="signin">
   <div class="container py-5">
-    <form class="w-100" @submit.prevent.stop="handleSubmit">
-      <div class="text-center mb-4">
-        <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
-      </div>
+      <h1 class="h3 mb-3 font-weight-normal">登入會員</h1>
+    <form class="signin-form" @submit.prevent.stop="handleSubmit">
 
       <div class="form-label-group mb-2">
-        <label for="email">email</label>
+        <label for="email">帳號</label>
         <input
           id="email"
           v-model="email"
@@ -21,7 +20,7 @@
       </div>
 
       <div class="form-label-group mb-3">
-        <label for="password">Password</label>
+        <label for="password">密碼</label>
         <input
           id="password"
           v-model="password"
@@ -35,21 +34,22 @@
       </div>
 
       <button
-        class="btn btn-lg btn-primary btn-block mb-3"
+        class="btnSignin btn-lg btn-primary btn-block mb-3"
         type="submit"
         :disabled="isProcessing"
       >
-        Submit
+        登入
       </button>
 
-      <div class="text-center mb-3">
+      <div class="btnSignup text-center mb-3">
         <p>
-          <router-link to="/signup">Sign Up</router-link>
+          <router-link to="/signup">註冊會員</router-link>
         </p>
       </div>
 
-      <p class="mt-5 mb-3 text-muted text-center">&copy; 2021-2022</p>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; 2022</p>
     </form>
+  </div>
   </div>
 </template>
 <script>
@@ -103,3 +103,85 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+@import "./../styles/variables.scss";
+#signin {
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 25px;
+  font-weight: bold;
+  color: #728C37;
+  font-size: 23px;
+}
+
+label {
+  position: absolute;
+  color: $secondaryTextColor;
+  font-size: 15px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  padding-left: 11px;
+}
+
+.placeholder {
+  position: absolute;
+  left: 0.625rem;
+  top: 0.313rem;
+  color: $secondaryTextColor;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+}
+
+.invalid {
+  border-bottom: 2px solid #fc5a5a;
+}
+
+input {
+  width: 540px;
+  height: 52px;
+  border-radius: 4px;
+  background-color: $formBgColor;
+  margin-bottom: 2em;
+  padding: 1.3em 0 0 1em;
+  font-size: 19px;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid $secondaryTextColor;
+  &:focus,
+  &:hover {
+    border-bottom: 2px solid #BAB649;
+  }
+}
+
+.form-label-group {
+  position: relative;
+}
+.btnSignin {
+  width: 540px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #728C37;
+  font-size: 18px;
+  font-weight: 700;
+  color: $white;
+  margin-top: 2em;
+  padding: 0.625rem 2.5rem;
+  border: none;
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+
+.btnSignup {
+  text-decoration-line: underline;
+  color: $blue;
+  font-weight: 700;
+}
+</style>

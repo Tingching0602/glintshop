@@ -69,3 +69,9 @@ input:required {
 input:invalid {
   box-shadow: none;
 }
+
+::-webkit-scrollbar {
+  /* make scrollbar transparent */
+  width: 0px;
+  background: transparent;
+}
