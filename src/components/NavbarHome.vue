@@ -23,20 +23,17 @@
     <router-link to="/aboutus">
         <img src="../assets/image/glintlogo.png" alt="brand logo" /></router-link>
       </div>
-      <div class="icon-link d-flex">
-        <router-link to="/shoppinghome">
-          <img src="../assets/image/cart@2x.png" alt="" class="shopping-cart"
-        /></router-link>
+        <router-link to="/shoppinghome">購物車
+          </router-link>
         <router-link to="/signin">
         <button
         type="button"
-        class="btn btn-sm btn-outline-success my-2 my-sm-0"
+        class="btnsignin btn-sm btn-outline-success my-2 my-sm-0"
       >
         登入
       </button>
       </router-link>
       </div>
-    </div>
   </header>
 </template>
 <style scoped>

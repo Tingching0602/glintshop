@@ -16,7 +16,9 @@
                 ＋
               </div>
             </div>
-            <div class="price">{{ product.price }}</div>
+            <div class="price d-flex grid-row-between">{{ product.price }}
+            </div>
+            <button class="cancel " @click.stop.prevent="removeProduct(product.id)">X</button>
           </div>
         </li>
       </ul>
@@ -109,6 +111,9 @@ export default {
         return product;
       });
     },
+    removeProduct(product) {
+      this.products = this.products.filter((item) => item.id !== product.id)
+    }
   },
   computed: {
     renewTotalPrice() {
