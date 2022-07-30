@@ -1,18 +1,14 @@
 <template>
   <div class="container">
-    <button 
-    type="button"
-    class="btn btn-sm c
-    btn-outline-success my-2 my-sm-0">
-      線上服務
-    </button>
-    <span></span>
-    <button
-    type="button"
-    class="btn btn-sm 
-    btn-outline-success my-2 my-sm-0">
-      寄訊息給我們
-    </button>
+   <h2>Panel Heading</h2>
+  <div class="panel1 panel-default">
+    <div class="panel-heading">Panel Heading</div>
+    <div class="panel-body">Panel Content</div>
+  </div>
+    <div class="panel2 panel-default">
+    <div class="panel-heading">Panel Heading</div>
+    <div class="panel-body">Panel Content</div>
+  </div>
     <div class="text-center mb-3">
     <p>
     <router-link to="/">返回首頁</router-link>
@@ -21,8 +17,12 @@
   </div>
 </template>
 <style scoped>
-.btn {
-text-align: center;
+.panel1 {
+text-align: start;
+
+}
+.panel2 {
+text-align: end;
 
 }
 </style>

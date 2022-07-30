@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-6 col-lg-4">
+  <div class="slide col-md-6 col-lg-4">
     <div class="card mb-4">
       <img
         class="card-img-top"
@@ -42,13 +42,17 @@ export default {
       plant: this.initialPlant,
     };
   },
+   methods: {
+      showNext() {
+        this.$refs.carousel.next()
+      },
+    }
 };
 </script>
 <style lang="scss" scoped>
 .card {
-  width: 25%;
-  justify-content: start;
-  flex-wrap: wrap;
-  background-color: #ccc6a1;
+  display: grid;
+  align-items: center;
+  background-color: #BAB6;
 }
 </style>

@@ -27,6 +27,7 @@ const dummyData = {
       "imag": "https://i.ibb.co/y5Q5QW2/plants1.jpg",
       "counts": "5",
       "description": "華麗花燭有愛心型的葉片",
+      "isFavorited": false
     },
     {
       "id": 179,
@@ -35,6 +36,7 @@ const dummyData = {
       "imag": "https://i.ibb.co/9sx8MdH/plants8.jpg",
       "counts": "5",
       "description": "雲斑金龍獨有的斑紋是他的特色",
+      "isFavorited": false
     },
     {
       "id": 220,
@@ -43,6 +45,7 @@ const dummyData = {
       "imag": "https://i.ibb.co/ZRsVkb1/plants2.jpg",
       "counts": "3",
       "description": "可以長很大的大麥克",
+      "isFavorited": false
     },
     {
       "id": 136,
@@ -51,6 +54,7 @@ const dummyData = {
       "imag": "https://i.ibb.co/7Q14vR1/plants9.jpg",
       "counts": "6",
       "description": "葉脈紋微微的黃白色",
+      "isFavorited": false
     },
      {
       "id": 304,
@@ -59,6 +63,7 @@ const dummyData = {
       "imag": "https://i.ibb.co/K9BwB1J/plants4.jpg",
       "counts": "7",
       "description": "攀附型植物照顧的好可以長一大片",
+      "isFavorited": false
     },
     {
       "id": 188,
@@ -67,6 +72,7 @@ const dummyData = {
       "imag": "https://i.ibb.co/LPcL7qk/plants10.jpg",
       "counts": "3",
       "description": "擁有迷彩紋的竹芋，可以長很大一片",
+      "isFavorited": false
     },
     {
       "id": 258,
@@ -75,6 +81,7 @@ const dummyData = {
       "imag": "https://i.ibb.co/XtfBkFP/plants6.jpg",
       "counts": "5",
       "description": "每一葉的白斑都長的不同，合果芋是觀葉植物中好照顧的品種之一",
+      "isFavorited": false
     },
     {
       "id": 197,
@@ -83,6 +90,7 @@ const dummyData = {
       "imag": "https://i.ibb.co/jLc4KjT/plants3.jpg",
       "counts": "6",
       "description": "彩葉芋品種之一",
+      "isFavorited": false
     },
     {
       "id": 80,
@@ -91,6 +99,7 @@ const dummyData = {
       "imag": "https://i.ibb.co/55WkX2H/plants5.jpg",
       "counts": "7",
       "description": "竹芋品種之一，擁有像熊貓眼的斑紋，因而得名",
+      "isFavorited": false
     },
      {
       "id": 680,
@@ -99,6 +108,7 @@ const dummyData = {
       "imag": "https://i.ibb.co/ZNHXXm6/plants7.jpg",
       "counts": "2",
       "description": "去年很熱門的觀葉植物之一",
+      "isFavorited": false
     }
   ],
   page: 1,
@@ -152,3 +162,4 @@ export default {
   },
 }
 </script>
+

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Navbar />
+    <NavbarHome />
     <main>
       <div class="container">
         <h2 class="checkout-title">結帳</h2>

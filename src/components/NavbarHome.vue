@@ -25,17 +25,31 @@
       </div>
         <router-link to="/shoppinghome">購物車
           </router-link>
-        <router-link to="/signin">
-        <button
-        type="button"
-        class="btnsignin btn-sm btn-outline-success my-2 my-sm-0"
+          <div class="ml-auto d-flex align-items-center">
+    <!-- is user is admin -->
+     <router-link to="/signin">登入會員
+          </router-link>
+    
+    <!-- is user is login -->
+    <template v-if="isAuthenticated">
+      <router-link
+        to="#"
+        class="text-white mr-3"
       >
-        登入
-      </button>
+         您好
       </router-link>
+      <button
+        type="button"
+        class="btn btn-sm btn-outline-success my-2 my-sm-0"
+      >
+        登出
+      </button>
+    </template>
+  </div>
       </div>
   </header>
 </template>
+
 <style scoped>
 .logo {
   width: 48px;
