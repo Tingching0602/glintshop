@@ -61,6 +61,7 @@ export default {
       email: "",
       password: "",
       isProcessing: false,
+      isAuthenticated:true
     };
   },
   methods: {
@@ -89,7 +90,7 @@ export default {
         //將資料傳到 vuex 中
         this.$store.commit("setCurrentUser", data.user);
         // 成功登入後轉址到餐廳首頁
-        this.$router.push("/");
+        this.$router.push("/HomeMain");
         // 原本的.then end--
       } catch (error) {
         this.isProcessing = false;

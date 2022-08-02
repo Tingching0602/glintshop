@@ -22,7 +22,7 @@
         </p>
       </div>
       <div class="card-footer">
-        <button @click="addPlant(plant)" class="btn btn-success btn-border favorite mr-2">
+        <button type="button" class="btn btn-outline-danger btn-sm ml-auto" @click="addToCart(plant.id)">
           加到購物車
         </button>
       </div>
@@ -46,6 +46,13 @@ export default {
       showNext() {
         this.$refs.carousel.next()
       },
+      addToCart() {
+        this.plant = {
+          ...this.plant,
+          
+        }
+      }
+
     }
 };
 </script>

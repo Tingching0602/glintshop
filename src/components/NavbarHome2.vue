@@ -31,7 +31,7 @@
      type="button"
      class="btn btn-sm btn-outline-success my-2 my-sm-0"
      id="btnlogin"
-     >登入會員
+     >登出會員
      </button> 
     </router-link>
     

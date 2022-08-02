@@ -5,6 +5,7 @@ import SignUp from '../views/SignUp.vue'
 import HomePage from '../views/HomePage.vue'
 import Shopping from '../views/ShoppingHome.vue'
 import NotFound from '../views/NotFound.vue'
+import HomePage2 from '../views/HomePage.vue'
 
 
 Vue.use(VueRouter)
@@ -14,6 +15,11 @@ const routes = [
     path: '/',
     name: 'homepage',
     component: HomePage
+  }, 
+  {
+    path: '/HomeMain',
+    name: 'homemain',
+    component: HomePage2
   }, 
   {
     path: '/signin',

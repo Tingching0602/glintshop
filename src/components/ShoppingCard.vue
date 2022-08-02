@@ -66,6 +66,10 @@ export default {
       type: Number,
       required: true,
     },
+    shoppingList: {
+      type: Number,
+      required: true,
+    }
   },
   data() {
     return {
